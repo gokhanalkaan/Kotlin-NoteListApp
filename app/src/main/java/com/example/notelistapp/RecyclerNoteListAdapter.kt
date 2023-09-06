@@ -196,10 +196,11 @@ class RecyclerNoteListAdapter(private val notes: MutableList<Note>): RecyclerVie
 
     fun deleteAll(context:Context) {
 
-        notes.clear();
+       
         for (item: Note in notes){
             deleteAlarm(context,item)
         }
+         notes.clear();
 
 
         notifyDataSetChanged()
